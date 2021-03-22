@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="1000"
+        motion:autoTransition="jumpToStart"
+        motion:staggered=".70"
+        motion:motionInterpolator="linear"
+        motion:pathMotionArc="startVertical">
+       <KeyFrameSet>
+           <KeyPosition
+               motion:motionTarget="@+id/img_one"
+               motion:keyPositionType="pathRelative" />
+           <KeyPosition
+               motion:motionTarget="@+id/img_one"
+               motion:framePosition="94"
+               motion:keyPositionType="deltaRelative" />
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/img_one"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:alpha="0" />
+        <Constraint
+            android:id="@+id/img_twitter"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/seperator_one"
+            motion:layout_constraintHorizontal_bias="0.34"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:alpha="0" />
+        <Constraint
+            android:id="@+id/img_twitter_two"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/seperator_one"
+            motion:layout_constraintHorizontal_bias=".75"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:alpha="0" />
+        <Constraint
+            android:id="@+id/textview_two"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toTopOf="@id/seperator_two"
+            motion:layout_constraintTop_toBottomOf="@id/seperator_one"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:alpha="0" />
+        <Constraint
+            android:id="@+id/seperator_two"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="1dp"
+            android:layout_height="100dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/seperator_one"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="visible"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:alpha="0" />
+        <Constraint
+            android:id="@+id/seperator_one"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            motion:layout_constraintBottom_toTopOf="@id/textview_two"
+            motion:layout_constraintTop_toBottomOf="@id/img_one"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:alpha="0" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end"></ConstraintSet>
+</MotionScene>

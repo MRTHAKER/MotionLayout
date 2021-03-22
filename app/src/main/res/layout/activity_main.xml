@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/img_one"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_yudiz"
+        app:layout_constraintBottom_toTopOf="@id/seperator_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/seperator_one"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/green"
+        app:layout_constraintBottom_toTopOf="@id/textview_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_one" />
+
+    <TextView
+        android:id="@+id/textview_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/a_problem_solver_in_a_problematic_world"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/seperator_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seperator_one" />
+
+    <ImageView
+        android:id="@+id/img_twitter"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_twitter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seperator_one"
+        app:tint="@color/green" />
+
+    <View
+        android:id="@+id/seperator_two"
+        android:layout_width="1dp"
+        android:layout_height="100dp"
+        android:background="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seperator_one" />
+
+    <ImageView
+        android:id="@+id/img_twitter_two"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_twitter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seperator_one"
+        app:tint="@color/green" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
